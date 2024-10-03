@@ -6,5 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Standortbestimmung standortbestimmung = new Standortbestimmung();
         standortbestimmung.main();
+
+        StandortbestimmungArrayList standortbestimmungArrayList = new StandortbestimmungArrayList();
+        standortbestimmungArrayList.main();
     }
 }
