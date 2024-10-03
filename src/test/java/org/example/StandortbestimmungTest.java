@@ -22,7 +22,7 @@ class StandortbestimmungTest {
         String[] AufgabenListe = new String[100];
         AufgabenListe[0] = "putzen";
         String aufgabe = standortbestimmung.aufgabenAnzeiger(AufgabenListe);
-        String vergleich = "1\tputzen";
+        String vergleich = "1\tputzen\n";
         assertEquals(vergleich, aufgabe);
     }
 

@@ -21,6 +21,7 @@ public class Standortbestimmung {
             System.out.println("3: Aufgabe bearbeiten");
             System.out.println("4: Aufgabe löschen");
             System.out.println("5: Programm beenden");
+            System.out.println("--------------------------------------------");
 
             eingabe = scanner.nextInt();
             switch (eingabe) {
@@ -70,7 +71,7 @@ public class Standortbestimmung {
         for (int i = 0; i < AufgabenListe.length && frage; i++) {
             if (AufgabenListe[i] != null) {
                 zaehler++;
-                ausgabe += zaehler + "\t" + AufgabenListe[i];
+                ausgabe += zaehler + "\t" + AufgabenListe[i] + "\n";
                 if (AufgabenListe[i + 1] == null) {
                     frage = false;
                 }
@@ -82,7 +83,8 @@ public class Standortbestimmung {
     public static void aufgabenBearbeiter(String[] AufgabenListe) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welche Aufgabe möchtest Sie bearbeiten?");
-        aufgabenAnzeiger(AufgabenListe);
+        System.out.println(aufgabenAnzeiger(AufgabenListe));
+
 
         int eingabe = scanner.nextInt();
 
@@ -100,7 +102,7 @@ public class Standortbestimmung {
     public static void aufgabeLoescher(String[] AufgabenListe) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welche Aufgabe möchtest Sie löschen?");
-        aufgabenAnzeiger(AufgabenListe);
+        System.out.println(aufgabenAnzeiger(AufgabenListe));
 
         int eingabe = scanner.nextInt();
 
@@ -118,6 +120,6 @@ public class Standortbestimmung {
             }
         }
         System.out.println("Die neu TodoList:");
-        aufgabenAnzeiger(AufgabenListe);
+        System.out.println(aufgabenAnzeiger(AufgabenListe));
     }
 }
